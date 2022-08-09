@@ -1,8 +1,7 @@
-﻿namespace DecoratorDesignPattern
+﻿namespace DecoratorDesignPattern;
+
+public class ConcreteComponent : Component
 {
-    public class ConcreteComponent : Component
-    {
-        public override string Operation() =>
-            "ConcreteComponent";
-    }
+    public override string Operation() =>
+        "ConcreteComponent";
 }

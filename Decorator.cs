@@ -1,22 +1,21 @@
-﻿namespace DecoratorDesignPattern
+﻿namespace DecoratorDesignPattern;
+
+public abstract class Decorator : Component
 {
-    public abstract class Decorator : Component
+    protected Component _component;
+
+    public Decorator(Component component) =>
+        _component = component;
+
+    public void SetComponent(Component component) =>
+        _component = component;
+
+    public override string Operation()
     {
-        protected Component _component;
+        if (_component == null)
+            return string.Empty;
 
-        public Decorator(Component component) =>
-            _component = component;
-
-        public void SetComponent(Component component) =>
-            _component = component;
-
-        public override string Operation()
-        {
-            if (_component == null)
-                return string.Empty;
-
-            return _component
-                .Operation();
-        }
+        return _component
+            .Operation();
     }
 }

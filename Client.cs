@@ -1,10 +1,9 @@
-﻿namespace DecoratorDesignPattern
+﻿namespace DecoratorDesignPattern;
+
+public class Client
 {
-    public class Client
+    public void ClientCode(Component component)
     {
-        public void ClientCode(Component component)
-        {
-            Console.WriteLine("RESULT: " + component.Operation());
-        }
+        Console.WriteLine("RESULT: " + component.Operation());
     }
 }

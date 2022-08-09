@@ -1,7 +1,6 @@
-﻿namespace DecoratorDesignPattern
+﻿namespace DecoratorDesignPattern;
+
+public abstract class Component
 {
-    public abstract class Component
-    {
-        public abstract string Operation();
-    }
+    public abstract string Operation();
 }
